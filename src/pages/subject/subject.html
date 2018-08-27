@@ -1,0 +1,107 @@
+<ion-header >
+	<ion-navbar color="black">
+		<button ion-button menuToggle  style="color: #FF6633;">
+			<ion-icon name= "menu"> </ion-icon>
+		</button>
+		<ion-title text-right class="margin0">
+			<ion-icon name="add" (click)="actionSubject('agregar','')"  style="color: #FF6633;"></ion-icon>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="fondo" >
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+	<ion-row   padding-top>
+		<ion-col col-1></ion-col>
+		<ion-col col-10  text-center>
+			<label class="title">
+				Listado de Subject de {{course.NameCourse}}
+			</label>
+			<div padding3></div>
+			<ion-searchbar (ionInput)="getItems($event)" placeholder="Buscar..." ></ion-searchbar>
+		</ion-col>
+		<ion-col col-1 style="color: #FF6633;"  text-center>
+		</ion-col>
+	</ion-row>
+	<ion-row *ngFor="let subject of subjects" >
+		<ion-col col-05></ion-col>
+		<ion-col col-11>
+			<div class="typecourse">
+				<ion-row >
+					<ion-col col-05></ion-col>
+					<ion-col col-11 class="caja_descripcion_typecourse centrartexto"	text-left>
+						<ion-row>
+							<ion-col col-5 >
+								<div class="padding4"></div>
+								<strong>
+									Nombre:
+								</strong>
+								<div class="padding4"></div>
+								<strong>
+									Duracion:
+								</strong>
+								<div class="padding4"></div>
+								<strong>
+									Descripción:
+								</strong>
+								<div class="padding4"></div>
+								<strong>
+									Creditos:
+								</strong>
+							</ion-col>
+							<ion-col col-7>
+								<div class="padding4"></div>
+								<label>
+									{{ subject.NameSubject }}
+								</label>
+								<div class="padding4"></div>
+								<label>
+									{{ subject.Duration }}
+								</label>
+								<div class="padding4"></div>
+								<label>
+									{{ subject.Description }}
+								</label>
+								<div class="padding4"></div>
+								<label>
+									{{ subject.creditos }}
+								</label>
+							</ion-col>
+						</ion-row>
+					</ion-col>
+					<ion-col col-05></ion-col>
+				</ion-row>
+				<ion-row class="seccion_inferior">
+					<ion-col col-6 class="caja_share centrartexto" (click)="actionSubject('editar',subject)">
+						<img src="assets/images/Iconos/editar.png">
+					</ion-col>
+					<ion-col col-6 class="caja_share centrartexto" (click)="deleteSubject(subject)">
+						<img src="assets/images/Iconos/eliminar.png">
+					</ion-col>
+				</ion-row>
+			</div>
+		</ion-col>
+		<ion-col col-05></ion-col>
+	</ion-row>
+	<ion-row *ngIf="subjects.length <=0" >
+		<ion-col col-05></ion-col>
+		<ion-col col-11>
+			<div class="typecourse">
+				<ion-row >
+					<ion-col col-12 class="caja_descripcion_typecourse centrartexto"	text-center>
+						<div class="padding4"></div>
+						<span>
+							Aun no tienes ningun subject (Selecciona <ion-icon name="add" style="color: #FF6633;"></ion-icon> para agregar uno nuevo)
+						</span>
+						<div class="padding4"></div>
+					</ion-col>
+
+				</ion-row>
+			</div>
+		</ion-col>
+		<ion-col col-05></ion-col>
+	</ion-row>
+
+</ion-content>
+

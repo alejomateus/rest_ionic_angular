@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "285218718230",
+    "firebase_url": "https://quua-sites.firebaseio.com",
+    "project_id": "quua-sites",
+    "storage_bucket": "quua-sites.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285218718230:android:b6fe09a29dd5a525",
+        "android_client_info": {
+          "package_name": "com.needzaio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285218718230-ak1t1s0gur49cfiifmu3h4jmfqlgdb7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdPwGCn_X-YBLjMCZy5HbZmml39LAMI0g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,150 @@
+page-principal {
+	font-family: 'Lato', sans-serif !important;
+	.fondo{
+		padding:0px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		//potypecoursen:absolute; z-index:0;
+		//height:100%;
+	}
+	.btn_enviar{
+		text-align: center;
+		div{
+			border-radius: 91px 91px 91px 91px;
+			-moz-border-radius: 91px 91px 91px 91px;
+			-webkit-border-radius: 91px 91px 91px 91px;
+			width:100%;
+			height: 35px;
+			border:1px solid rgba(0, 102, 204, 1);
+			color:#fff;
+
+		}
+		div >ion-label{
+			margin-top:7.5px;
+			font-size:15px;
+			color:rgba(0, 102, 204, 1);
+			margin-right: 0px;
+		}
+	}
+	.caja_nombre{
+		border: 0.5px ridge rgb(169, 169, 169);
+		background-color: rgba(242, 242, 242, 1);
+	}
+	.caja_tipo{
+		width: 100%;
+		max-width: 100%;
+		border:0.5px  ridge #FF6633;
+		background-color: rgba(242, 242, 242, 1);
+	}
+	.mensaje{
+		background-color: rgba(242, 242, 242, 1);
+		width: 100%;
+		height: 120px;
+	}
+	.title{
+		text-align: center;
+		color:#FF6633;
+		font-size: 20px;
+		margin: 13px 8px 0px 0px;
+	}
+	select{
+		text-align: center;
+		margin: 0px;
+		border:0px;
+		width: 100%;
+		height: 100%;
+		font-size: 100%;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		padding-left:4px;
+	}
+	option{
+		color: #000;
+	}
+	.typecourse{
+		margin-bottom: 5px;
+		-webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.71);
+		-moz-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.71);
+		box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.71);
+		// border-radius: 10px 10px 10px 10px;
+		// -moz-border-radius: 10px 10px 10px 10px;
+		// -webkit-border-radius: 10px 10px 10px 10px;
+		border: 0px solid #000000;
+
+	}
+	.caja_descripcion_typecourse{
+		padding-right:  0px;
+		font-size: 14px;
+		margin:auto;
+	}
+	.caja_descripcion_typecourse >b{
+		color:#4d4d4d;
+	}
+	.caja_descripcion_typecourse >label{
+		color: #363636;
+	}
+	.btn_actions{
+		border-left:  1px solid gray;
+	}
+	.imagen_acciones{
+		width: 100%;
+	}
+	.imagen_google_places{
+		width: 100%;
+	}
+	.seccion_inferior{
+		// border-top: 1px solid #666666;
+	}
+	.caja_ir_a{
+		color:#0072FC;
+		max-height: 36px;
+		padding: 10px;
+	}
+	.caja_ir_a >img{
+		max-height:16px;
+		height: 16px;
+	}
+	.caja_ir_a >label{
+		margin-top:8px ;
+		font-size: 16px;
+		vertical-align:middle; 
+		display:table-cell;
+	}
+
+	.caja_share{
+		color:red;
+		font-size:16px;
+	}
+	
+	.caja_share >img{
+		max-height:20px;
+		height: 20px;
+	}
+	.caja_share >ion-icon{
+		font-size:26px;
+	}
+	.caja_share >label{
+		margin-top:8px ;
+		font-size: 16px;
+		vertical-align:middle; 
+		display:table-cell;
+	}
+	.icono_basura{
+		font-size:20px;
+		color:red;
+	}
+	.searchbar-md .searchbar-search-icon {
+		left: 16px;
+		top: 11px;
+		background-image: url("../assets/images/Iconos/buscar.png");
+		width: 21px;
+		height: 21px;
+	}
+	ion-title{
+		margin:0px !important;
+	}
+	.searchbar-md .searchbar-input {
+		-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+}

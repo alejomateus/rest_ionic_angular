@@ -1,0 +1,57 @@
+<ion-content #nav class="fondo" >
+	<div  class="contenido">
+		<ion-row  padding >
+		</ion-row>
+
+		<form [formGroup]="myForm" (ngSubmit)="login(myForm)" novalidate>
+			<ion-row padding-top>
+				<ion-col col-15 >
+				</ion-col>
+				<ion-col col-9 class="padding0 centrartexto" >
+					<input type="email" class="shadow" formControlName="nombreUsuario"  placeholder="Correo electrónico">
+					<div class="validaciones" *ngIf="myForm.get('nombreUsuario').errors && myForm.get('nombreUsuario').dirty">
+						<label color="blanco" *ngIf="myForm.get('nombreUsuario').hasError('required')">El campo Correo Electrónico es
+						obligatorio</label>
+						<label color="blanco" *ngIf="myForm.get('nombreUsuario').hasError('invalidEmail')">Ingrese un Correo
+						Electrónico válido </label>
+					</div>
+				</ion-col>
+				<ion-col col-15>
+				</ion-col>
+			</ion-row>
+			<ion-row class="padding_top" >
+				<ion-col col-15>
+				</ion-col>
+				<ion-col col-9 class="padding0 centrartexto " >
+					<input type="password" placeholder="Contraseña"  formControlName="password"  class="shadow">
+					<div class="validaciones" *ngIf="myForm.get('password').errors && myForm.get('password').dirty">
+						<label color="blanco" *ngIf="myForm.get('password').hasError('minlength')">Mínimo 6 caracteres</label>
+						<label color="blanco" *ngIf="myForm.get('password').hasError('maxlength')">Máximo 18 caracteres</label>
+						<label color="blanco" *ngIf="myForm.get('password').hasError('required')">El campo Contraseña es obligatorio</label>
+					</div>
+				</ion-col>
+				<ion-col col-15>
+				</ion-col>
+			</ion-row>
+			<ion-row  class="padding_top" >
+				<ion-col col-35>
+				</ion-col>
+				<ion-col col-9 class="padding0 centrartexto" >
+					<div  >
+						<ion-row>
+							<ion-col class="padding0" col-12 >
+								<button ion-button block type="submit" [disabled]="!myForm.valid" class="textbtningresar btn-ingresar">Ingresar</button>
+							</ion-col>
+						</ion-row>
+					</div>
+				</ion-col>
+				<ion-col col-35>
+				</ion-col>
+			</ion-row>
+		</form>
+		<ion-row >
+		</ion-row>
+	</div>
+	<div style="padding-bottom: 20px;">
+	</div>
+</ion-content>

@@ -1,0 +1,100 @@
+<ion-header style="background: none;">
+	<ion-navbar color="black">
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-row   padding-top>
+		<ion-col col-1></ion-col>
+		<ion-col col-10  text-center>
+			<label class="title" color="primary">
+				Administracion de Courses
+			</label>
+		</ion-col>
+		<ion-col col-1 style="color: #FF6633;"  text-center>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-12>
+			<form [formGroup]="myForm" (ngSubmit)="guardarcourse(myForm)" novalidate>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-input placeholder="NameCourse" class="fulllarge" formControlName="NameCourse" type="text"></ion-input>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('NameCourse').errors && myForm.get('NameCourse').dirty">
+							<label *ngIf="myForm.get('NameCourse').hasError('required')">El NameCourse es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0" text-center>
+						<ion-item class="contenedor_inputs ">
+							<ion-label color="colorglobal">isMilitar</ion-label>
+							<ion-checkbox formControlName="isMilitar"></ion-checkbox>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-input placeholder="DurationTotal" class="fulllarge" formControlName="DurationTotal" type="number"></ion-input>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('DurationTotal').errors && myForm.get('DurationTotal').dirty">
+							<label *ngIf="myForm.get('DurationTotal').hasError('required')">El DurationTotal es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-textarea placeholder="Description" class="fulllarge" formControlName="Description" type="text"></ion-textarea>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('Description').errors && myForm.get('Description').dirty">
+							<label *ngIf="myForm.get('Description').hasError('required')">El Description es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-input placeholder="NoRegisterMinE" class="fulllarge" formControlName="NoRegisterMinE" type="text"></ion-input>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('NoRegisterMinE').errors && myForm.get('NoRegisterMinE').dirty">
+							<label *ngIf="myForm.get('NoRegisterMinE').hasError('required')">El NoRegisterMinE es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-input placeholder="NoRegisterMIL" class="fulllarge" formControlName="NoRegisterMIL" type="text"></ion-input>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('NoRegisterMIL').errors && myForm.get('NoRegisterMIL').dirty">
+							<label *ngIf="myForm.get('NoRegisterMIL').hasError('required')">El NoRegisterMIL es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row padding-top>
+					<ion-col col-2></ion-col>
+					<ion-col col-8 >  
+						<button type="submit" [disabled]="!myForm.valid" class="fulllarge" class="btn_guardar">
+							<ion-label>Finalizar</ion-label>
+						</button>
+					</ion-col>
+					<ion-col col-2></ion-col>
+				</ion-row>
+			</form>
+		</ion-col>
+	</ion-row>
+	<div padding></div>
+</ion-content>

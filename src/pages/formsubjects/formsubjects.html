@@ -1,0 +1,80 @@
+<ion-header style="background: none;">
+	<ion-navbar color="black">
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-row   padding-top>
+		<ion-col col-1></ion-col>
+		<ion-col col-10  text-center>
+			<label class="title" color="primary">
+				Administracion de Subject
+			</label>
+		</ion-col>
+		<ion-col col-1 style="color: #FF6633;"  text-center>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col col-12>
+			<form [formGroup]="myForm" (ngSubmit)="guardarsubject(myForm)" novalidate>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-input placeholder="NameSubject" class="fulllarge" formControlName="NameSubject" type="text"></ion-input>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('NameSubject').errors && myForm.get('NameSubject').dirty">
+							<label *ngIf="myForm.get('NameSubject').hasError('required')">El NameSubject es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-input placeholder="Duration" class="fulllarge" formControlName="Duration" type="number"></ion-input>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('Duration').errors && myForm.get('Duration').dirty">
+							<label *ngIf="myForm.get('Duration').hasError('required')">El Duration es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-textarea placeholder="Description" class="fulllarge" formControlName="Description" type="text"></ion-textarea>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('Description').errors && myForm.get('Description').dirty">
+							<label *ngIf="myForm.get('Description').hasError('required')">El Description es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="padding0">
+						<ion-item class="contenedor_inputs inputs_login">
+							<ion-label color="colorglobal">
+							</ion-label>
+							<ion-input placeholder="creditos" class="fulllarge" formControlName="creditos" type="number"></ion-input>
+						</ion-item>
+						<div class="validaciones" *ngIf="myForm.get('creditos').errors && myForm.get('creditos').dirty">
+							<label *ngIf="myForm.get('creditos').hasError('required')">El creditos es obligatorio</label>
+						</div>
+					</ion-col>
+				</ion-row>
+				<ion-row padding-top>
+					<ion-col col-2></ion-col>
+					<ion-col col-8 >  
+						<button type="submit" [disabled]="!myForm.valid" class="fulllarge" class="btn_guardar">
+							<ion-label>Finalizar</ion-label>
+						</button>
+					</ion-col>
+					<ion-col col-2></ion-col>
+				</ion-row>
+			</form>
+		</ion-col>
+	</ion-row>
+	<div padding></div>
+</ion-content>
